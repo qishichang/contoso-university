@@ -18,7 +18,7 @@ namespace ContosoUniversity.Models
 
         public int DepartmentID { get; set; }
 
-        public Department Deparment { get; set; }
+        public Department Department { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
 
