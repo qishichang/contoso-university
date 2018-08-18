@@ -24,6 +24,7 @@ namespace ContosoUniversity.Data
             modelBuilder.Entity<OfficeAssignment>().ToTable("OfficeAssignment");
             modelBuilder.Entity<CourseAssignment>().ToTable("CourseAssignment");
             modelBuilder.Entity<CourseAssignment>().HasKey(c => new { c.CourseID, c.InstructorID });
+            modelBuilder.Entity<Person>().ToTable("Person");
         }
 
         public DbSet<Course> Courses { get; set; }
@@ -33,6 +34,6 @@ namespace ContosoUniversity.Data
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
         public DbSet<CourseAssignment> CourseAssignments { get; set; }
-
+        public DbSet<Person> People { get; set; }
     }
 }
